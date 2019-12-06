@@ -1,7 +1,7 @@
 //=============================================
 //== Script ~ Troca de cartas MVP      ========
 //== Versão: ==================================
-//== 1.0 - NPC Criado.
+//== 1.0
 //== Autor: ===================================
 //== 		Ark1n
 //=============================================
@@ -35,7 +35,7 @@ c1:
 	next;
 	mes @n$;
 	mes"Você deseja trocar a carta da ^0000FFAbelha Rainha^000000 por 1 ponto de troca?";
-	switch(select("Sim, Quero trocar!":"Não, "+(sex?"obrigado":"obrigada")+"." )) {
+	switch(select("Sim, Quero trocar!","Não, "+(sex?"obrigado":"obrigada")+"." )) {
 			case 1:
 				next;
 				mes @n$;
@@ -74,7 +74,7 @@ c2:
 	next;
 	mes @n$;
 	mes"Você deseja trocar a carta do ^0000FFAlgoz Eremes^000000 por 1 ponto de troca?";
-	switch(select("Sim, Quero trocar!":"Não, "+(sex?"obrigado":"obrigada")+"." )) {
+	switch(select("Sim, Quero trocar!","Não, "+(sex?"obrigado":"obrigada")+"." )) {
 			case 1:
 				next;
 				mes @n$;
@@ -113,7 +113,7 @@ c3:
 	next;
 	mes @n$;
 	mes"Você deseja trocar a carta da ^0000FFAtiradora de Elite Cecil^000000 por 1 ponto de troca?";
-	switch(select("Sim, Quero trocar!":"Não, "+(sex?"obrigado":"obrigada")+"." )) {
+	switch(select("Sim, Quero trocar!","Não, "+(sex?"obrigado":"obrigada")+"." )) {
 			case 1:
 				next;
 				mes @n$;
@@ -152,7 +152,7 @@ c4:
 	next;
 	mes @n$;
 	mes"Você deseja trocar a carta do ^0000FFAtroce^000000 por 1 ponto de troca?";
-	switch(select("Sim, Quero trocar!":"Não, "+(sex?"obrigado":"obrigada")+"." )) {
+	switch(select("Sim, Quero trocar!","Não, "+(sex?"obrigado":"obrigada")+"." )) {
 			case 1:
 				next;
 				mes @n$;
@@ -191,7 +191,7 @@ c5:
 	next;
 	mes @n$;
 	mes"Você deseja trocar a carta do ^0000FFBafomé^000000 por 1 ponto de troca?";
-	switch(select("Sim, Quero trocar!":"Não, "+(sex?"obrigado":"obrigada")+"." )) {
+	switch(select("Sim, Quero trocar!","Não, "+(sex?"obrigado":"obrigada")+"." )) {
 			case 1:
 				next;
 				mes @n$;
@@ -230,7 +230,7 @@ c6:
 	next;
 	mes @n$;
 	mes"Você deseja trocar a carta do ^0000FFBelzebu^000000 por 1 ponto de troca?";
-	switch(select("Sim, Quero trocar!":"Não, "+(sex?"obrigado":"obrigada")+"." )) {
+	switch(select("Sim, Quero trocar!","Não, "+(sex?"obrigado":"obrigada")+"." )) {
 			case 1:
 				next;
 				mes @n$;
@@ -269,7 +269,7 @@ c7:
 	next;
 	mes @n$;
 	mes"Você deseja trocar a carta da ^0000FFDama de Branco^000000 por 1 ponto de troca?";
-	switch(select("Sim, Quero trocar!":"Não, "+(sex?"obrigado":"obrigada")+"." )) {
+	switch(select("Sim, Quero trocar!","Não, "+(sex?"obrigado":"obrigada")+"." )) {
 			case 1:
 				next;
 				mes @n$;
@@ -308,7 +308,7 @@ c8:
 	next;
 	mes @n$;
 	mes"Você deseja trocar a carta do ^0000FFDetardeurus^000000 por 1 ponto de troca?";
-	switch(select("Sim, Quero trocar!":"Não, "+(sex?"obrigado":"obrigada")+"." )) {
+	switch(select("Sim, Quero trocar!","Não, "+(sex?"obrigado":"obrigada")+"." )) {
 			case 1:
 				next;
 				mes @n$;
@@ -347,7 +347,7 @@ c9:
 	next;
 	mes @n$;
 	mes"Você deseja trocar a carta do ^0000FFDoppelganger^000000 por 1 ponto de troca?";
-	switch(select("Sim, Quero trocar!":"Não, "+(sex?"obrigado":"obrigada")+"." )) {
+	switch(select("Sim, Quero trocar!","Não, "+(sex?"obrigado":"obrigada")+"." )) {
 			case 1:
 				next;
 				mes @n$;
@@ -386,7 +386,7 @@ c10:
 	next;
 	mes @n$;
 	mes"Você deseja trocar a carta da ^0000FFDracula^000000 por 1 ponto de troca?";
-	switch(select("Sim, Quero trocar!":"Não, "+(sex?"obrigado":"obrigada")+"." )) {
+	switch(select("Sim, Quero trocar!","Não, "+(sex?"obrigado":"obrigada")+"." )) {
 			case 1:
 				next;
 				mes @n$;
@@ -425,7 +425,7 @@ c11:
 	next;
 	mes @n$;
 	mes"Você deseja trocar a carta da ^0000Drake^000000 por 1 ponto de troca?";
-	switch(select("Sim, Quero trocar!":"Não, "+(sex?"obrigado":"obrigada")+"." )) {
+	switch(select("Sim, Quero trocar!","Não, "+(sex?"obrigado":"obrigada")+"." )) {
 			case 1:
 				next;
 				mes @n$;
@@ -464,7 +464,7 @@ c12:
 	next;
 	mes @n$;
 	mes"Você deseja trocar a carta do ^0000FFEddga^000000 por 1 ponto de troca?";
-	switch(select("Sim, Quero trocar!":"Não, "+(sex?"obrigado":"obrigada")+"." )) {
+	switch(select("Sim, Quero trocar!","Não, "+(sex?"obrigado":"obrigada")+"." )) {
 			case 1:
 				next;
 				mes @n$;
@@ -503,7 +503,7 @@ c13:
 	next;
 	mes @n$;
 	mes"Você deseja trocar a carta da ^0000FFEspadachim Egnigem Cenia [Chefe]^000000 por 1 ponto de troca?";
-	switch(select("Sim, Quero trocar!":"Não, "+(sex?"obrigado":"obrigada")+"." )) {
+	switch(select("Sim, Quero trocar!","Não, "+(sex?"obrigado":"obrigada")+"." )) {
 			case 1:
 				next;
 				mes @n$;
@@ -542,7 +542,7 @@ c14:
 	next;
 	mes @n$;
 	mes"Você deseja trocar a carta do ^0000FFFaraó^000000 por 1 ponto de troca?";
-	switch(select("Sim, Quero trocar!":"Não, "+(sex?"obrigado":"obrigada")+"." )) {
+	switch(select("Sim, Quero trocar!","Não, "+(sex?"obrigado":"obrigada")+"." )) {
 			case 1:
 				next;
 				mes @n$;
@@ -581,7 +581,7 @@ c15:
 	next;
 	mes @n$;
 	mes"Você deseja trocar a carta da ^0000FFFlor do Luar^000000 por 1 ponto de troca?";
-	switch(select("Sim, Quero trocar!":"Não, "+(sex?"obrigado":"obrigada")+"." )) {
+	switch(select("Sim, Quero trocar!","Não, "+(sex?"obrigado":"obrigada")+"." )) {
 			case 1:
 				next;
 				mes @n$;
@@ -620,7 +620,7 @@ c16:
 	next;
 	mes @n$;
 	mes"Você deseja trocar a carta do ^0000FFHatii^000000 por 1 ponto de troca?";
-	switch(select("Sim, Quero trocar!":"Não, "+(sex?"obrigado":"obrigada")+"." )) {
+	switch(select("Sim, Quero trocar!","Não, "+(sex?"obrigado":"obrigada")+"." )) {
 			case 1:
 				next;
 				mes @n$;
@@ -659,7 +659,7 @@ c17:
 	next;
 	mes @n$;
 	mes"Você deseja trocar a carta do ^0000FFKtullanux^000000 por 1 ponto de troca?";
-	switch(select("Sim, Quero trocar!":"Não, "+(sex?"obrigado":"obrigada")+"." )) {
+	switch(select("Sim, Quero trocar!","Não, "+(sex?"obrigado":"obrigada")+"." )) {
 			case 1:
 				next;
 				mes @n$;
@@ -698,7 +698,7 @@ c18:
 	next;
 	mes @n$;
 	mes"Você deseja trocar a carta da ^0000FFLady Tanee^000000 por 1 ponto de troca?";
-	switch(select("Sim, Quero trocar!":"Não, "+(sex?"obrigado":"obrigada")+"." )) {
+	switch(select("Sim, Quero trocar!","Não, "+(sex?"obrigado":"obrigada")+"." )) {
 			case 1:
 				next;
 				mes @n$;
@@ -737,7 +737,7 @@ c19:
 	next;
 	mes @n$;
 	mes"Você deseja trocar a carta do ^0000FFOsiris^000000 por 1 ponto de troca?";
-	switch(select("Sim, Quero trocar!":"Não, "+(sex?"obrigado":"obrigada")+"." )) {
+	switch(select("Sim, Quero trocar!","Não, "+(sex?"obrigado":"obrigada")+"." )) {
 			case 1:
 				next;
 				mes @n$;
@@ -776,7 +776,7 @@ c20:
 	next;
 	mes @n$;
 	mes"Você deseja trocar a carta do ^0000FFOrc Heroi^000000 por 1 ponto de troca?";
-	switch(select("Sim, Quero trocar!":"Não, "+(sex?"obrigado":"obrigada")+"." )) {
+	switch(select("Sim, Quero trocar!","Não, "+(sex?"obrigado":"obrigada")+"." )) {
 			case 1:
 				next;
 				mes @n$;
@@ -815,7 +815,7 @@ c21:
 	next;
 	mes @n$;
 	mes"Você deseja trocar a carta do ^0000FFRSX-0806^000000 por 1 ponto de troca?";
-	switch(select("Sim, Quero trocar!":"Não, "+(sex?"obrigado":"obrigada")+"." )) {
+	switch(select("Sim, Quero trocar!","Não, "+(sex?"obrigado":"obrigada")+"." )) {
 			case 1:
 				next;
 				mes @n$;
@@ -854,7 +854,7 @@ c22:
 	next;
 	mes @n$;
 	mes"Você deseja trocar a carta do ^0000FFSenhor dos Mortos^000000 por 1 ponto de troca?";
-	switch(select("Sim, Quero trocar!":"Não, "+(sex?"obrigado":"obrigada")+"." )) {
+	switch(select("Sim, Quero trocar!","Não, "+(sex?"obrigado":"obrigada")+"." )) {
 			case 1:
 				next;
 				mes @n$;
@@ -893,7 +893,7 @@ c23:
 	next;
 	mes @n$;
 	mes"Você deseja trocar a carta do ^0000FFSenhor dos Orcs^000000 por 1 ponto de troca?";
-	switch(select("Sim, Quero trocar!":"Não, "+(sex?"obrigado":"obrigada")+"." )) {
+	switch(select("Sim, Quero trocar!","Não, "+(sex?"obrigado":"obrigada")+"." )) {
 			case 1:
 				next;
 				mes @n$;
@@ -932,7 +932,7 @@ c24:
 	next;
 	mes @n$;
 	mes"Você deseja trocar a carta da ^0000FFSerpente Suprema^000000 por 1 ponto de troca?";
-	switch(select("Sim, Quero trocar!":"Não, "+(sex?"obrigado":"obrigada")+"." )) {
+	switch(select("Sim, Quero trocar!","Não, "+(sex?"obrigado":"obrigada")+"." )) {
 			case 1:
 				next;
 				mes @n$;
@@ -971,7 +971,7 @@ c25:
 	next;
 	mes @n$;
 	mes"Você deseja trocar a carta da ^0000FFSumo Sacerdotisa Margaretha^000000 por 1 ponto de troca?";
-	switch(select("Sim, Quero trocar!":"Não, "+(sex?"obrigado":"obrigada")+"." )) {
+	switch(select("Sim, Quero trocar!","Não, "+(sex?"obrigado":"obrigada")+"." )) {
 			case 1:
 				next;
 				mes @n$;
@@ -1010,7 +1010,7 @@ c26:
 	next;
 	mes @n$;
 	mes"Você deseja trocar a carta do ^0000FFVesper^000000 por 1 ponto de troca?";
-	switch(select("Sim, Quero trocar!":"Não, "+(sex?"obrigado":"obrigada")+"." )) {
+	switch(select("Sim, Quero trocar!","Não, "+(sex?"obrigado":"obrigada")+"." )) {
 			case 1:
 				next;
 				mes @n$;
@@ -1049,7 +1049,7 @@ c27:
 	next;
 	mes @n$;
 	mes"Você deseja trocar a carta da ^0000FFFreeoni^000000 por 1 ponto de troca?";
-	switch(select("Sim, Quero trocar!":"Não, "+(sex?"obrigado":"obrigada")+"." )) {
+	switch(select("Sim, Quero trocar!","Não, "+(sex?"obrigado":"obrigada")+"." )) {
 			case 1:
 				next;
 				mes @n$;
@@ -1088,7 +1088,7 @@ c28:
 	next;
 	mes @n$;
 	mes"Você deseja trocar a carta do ^0000FFCavaleiro da Tempestade^000000 por 1 ponto de troca?";
-	switch(select("Sim, Quero trocar!":"Não, "+(sex?"obrigado":"obrigada")+"." )) {
+	switch(select("Sim, Quero trocar!","Não, "+(sex?"obrigado":"obrigada")+"." )) {
 			case 1:
 				next;
 				mes @n$;
@@ -1127,7 +1127,7 @@ c29:
 	next;
 	mes @n$;
 	mes"Você deseja trocar a carta do ^0000FFSamurai Encarnado^000000 por 1 ponto de troca?";
-	switch(select("Sim, Quero trocar!":"Não, "+(sex?"obrigado":"obrigada")+"." )) {
+	switch(select("Sim, Quero trocar!","Não, "+(sex?"obrigado":"obrigada")+"." )) {
 			case 1:
 				next;
 				mes @n$;
@@ -1166,7 +1166,7 @@ c30:
 	next;
 	mes @n$;
 	mes"Você deseja trocar a carta do ^0000FFSenhor das Trevas^000000 por 1 ponto de troca?";
-	switch(select("Sim, Quero trocar!":"Não, "+(sex?"obrigado":"obrigada")+"." )) {
+	switch(select("Sim, Quero trocar!","Não, "+(sex?"obrigado":"obrigada")+"." )) {
 			case 1:
 				next;
 				mes @n$;
@@ -1216,7 +1216,7 @@ usarpontos:
 	mes @n$;
 	mes "Você gostaria de jogar na roleta ?";
 	next;
-	switch(select("Vou jogar agora!":"Pensando bem, vou deixar pra depois.")) {
+	switch(select("Vou jogar agora!","Pensando bem, vou deixar pra depois.")) {
 		case 1:
 		mes @n$;
 		mes "Espero que você tenha muita sorte e receba a carta que deseja "+strchainfo(0)+"!";
