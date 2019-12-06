@@ -8,7 +8,6 @@
 prontera,150,150,3	script	Maquina de Trocas	563,{
 //=======================================================
 // Configurações do NPC 
-set #pontoscarta,0;
 set @n$,"[^0000FF Maquina de Trocas ^000000]";
 // ======================================================
 
