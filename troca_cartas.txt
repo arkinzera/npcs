@@ -1215,30 +1215,38 @@ usarpontos:
 	mes "Carta Amon Ra e Carta Maya - 20%";
 	mes "Carta Tao Gunka e Carta General Tartaruga - 12%";
 	mes "Carta Bispo Decadente, Carta Ifrit, Carta Mestre-Ferreiro Howard  - 8%";
-	mes "Carta Arquimaga Kathryne, Carta Besouro Ladrão Dourado, Carta Kiel-D-01, Carta Lord Seyren, Carta Memória de Thanatos, Carta Valquiria Randgris - 2%";
+	mes "Carta Besouro Ladrão Dourado, Carta Lord Seyren e Carta Valquiria Randgris - 3%";
+	mes "Carta Arquimaga Kathryne, Carta Kiel-D-01 e Carta Memória de Thanatos - 1%";
 	next;
 	mes @n$;
 	mes "Você gostaria de jogar na roleta ?";
+	mes "Lembrando que você precisa de ^FF00005^000000 Pontos de troca e ^FF0000100KK^000000 em Zeny!";
 	next;
 	switch(select("Vou jogar agora!","Pensando bem, vou deixar pra depois.")) {
 		case 1:
 		if(#pontoscarta < 5){
 			mes @n$;
-			mes "Você precisa ter pelo menos 5 pontos de troca para jogar!";
+			mes "Você precisa ter pelo menos ^FF00005^000000 pontos de troca e ^FF0000100KK^000000 em Zeny para jogar!";
 			close;
 		} else {
-		set #pontoscarta,#pontoscarta-5;
-		mes @n$;
-		mes "Espero que você tenha muita sorte e receba a carta que deseja "+strcharinfo(0)+"!";
-		next;
-		mes "Beep... Beep... Beep...";
-		next;
+			if(Zeny<100000000){
+				mes @n$;
+				mes "Você não possui o dinheiro necessário!";
+				close;
+				} else {
+					set #pontoscarta,#pontoscarta-5;
+					set Zeny,Zeny-100000000;
+					mes @n$;
+					mes "Espero que você tenha muita sorte e receba a carta que deseja "+strcharinfo(0)+"!";
+					next;
+					mes "Beep... Beep... Beep...";
+					next;
 		
 				if(rand (100) < 41) goto premio1;
 				if(rand (100) >= 41 && rand (100) < 65) goto premio2;
 				if(rand (100) >= 65 && rand (100) < 89) goto premio3;	
-				if(rand (100) >= 89 && rand (100) <= 100) goto premio4;
-
+				if(rand (100) >= 89 && rand (100) < 98) goto premio4;
+				if(rand (100) >= 98 && rand (100) <= 100) goto premio5;
 
 			premio1:
 				if(rand (2) == 1){
@@ -1301,56 +1309,65 @@ usarpontos:
 						}
 					}
 			
+
 			premio4:
-				if(rand(6) == 1){
-					emotion e_grat;
-					mes @n$;
-					mes "Parabéns "+strcharinfo(0)+", aqui está o seu prêmio!";
-					getitem 4365,1;
-					announce "Uau," +(Sex?"O Jogador":"A Jogadora")+" "+strcharinfo(0)+" teve muita sorte e recebeu a carta da Arquimaga Kathryne na Maquina de Troca! (2% de chance)",bc_all,0xFF0000,FW_BOLD; 
-					close;
-					}
-				if(rand(6) == 2){
+				if(rand(3) == 1){
 					emotion e_grat;
 					mes @n$;
 					mes "Parabéns "+strcharinfo(0)+", aqui está o seu prêmio!";
 					getitem 4128,1;
-					announce "Uau," +(Sex?"O Jogador":"A Jogadora")+" "+strcharinfo(0)+" teve muita sorte e recebeu a carta do Besouro-Ladrão Dourado na Maquina de Troca! (2% de chance)",bc_all,0xFF0000,FW_BOLD; 
+					announce "Uau," +(Sex?"O Jogador":"A Jogadora")+" "+strcharinfo(0)+" teve muita sorte e recebeu a carta do Besouro-Ladrão Dourado na Maquina de Troca! (3% de chance)",bc_all,0x0000FF,FW_BOLD; 
 					close;
 					}
-				if(rand(6) == 3){
-					emotion e_grat;
-					mes @n$;
-					mes "Parabéns "+strcharinfo(0)+", aqui está o seu prêmio!";
-					getitem 4403,1;
-					announce "Uau," +(Sex?"O Jogador":"A Jogadora")+" "+strcharinfo(0)+" teve muita sorte e recebeu a carta do Kiel-D-01 na Maquina de Troca! (2% de chance)",bc_all,0xFF0000,FW_BOLD; 
-					close;
-					}
-				if(rand(6) == 4){
+
+				if(rand(3) == 2){
 					emotion e_grat;
 					mes @n$;
 					mes "Parabéns "+strcharinfo(0)+", aqui está o seu prêmio!";
 					getitem 4357,1;
-					announce "Uau," +(Sex?"O Jogador":"A Jogadora")+" "+strcharinfo(0)+" teve muita sorte e recebeu a carta do Lord Seyren na Maquina de Troca! (2% de chance)",bc_all,0xFF0000,FW_BOLD; 
+					announce "Uau," +(Sex?"O Jogador":"A Jogadora")+" "+strcharinfo(0)+" teve muita sorte e recebeu a carta do Lord Seyren na Maquina de Troca! (3% de chance)",bc_all,0x0000FF,FW_BOLD; 
 					close;
 					}
-				if(rand(6) == 5){
-					emotion e_grat;
-					mes @n$;
-					mes "Parabéns "+strcharinfo(0)+", aqui está o seu prêmio!";
-					getitem 4399,1;
-					announce "Uau," +(Sex?"O Jogador":"A Jogadora")+" "+strcharinfo(0)+" teve muita sorte e recebeu a carta da Memória de Thanatos na Maquina de Troca! (2% de chance)",bc_all,0xFF0000,FW_BOLD; 
-					close;
-					}
-				if(rand(6) == 6){
+
+				if(rand(3) == 3){
 					emotion e_grat;
 					mes @n$;
 					mes "Parabéns "+strcharinfo(0)+", aqui está o seu prêmio!";
 					getitem 4407,1;
-					announce "Uau," +(Sex?"O Jogador":"A Jogadora")+" "+strcharinfo(0)+" teve muita sorte e recebeu a carta da Valquiria Randgris na Maquina de Troca! (2% de chance)",bc_all,0xFF0000,FW_BOLD; 
+					announce "Uau," +(Sex?"O Jogador":"A Jogadora")+" "+strcharinfo(0)+" teve muita sorte e recebeu a carta da Valquiria Randgris na Maquina de Troca! (3% de chance)",bc_all,0x0000FF,FW_BOLD; 
 					close;
 					}
-		}
+
+			premio5:
+				if(rand(3) == 1){
+					emotion e_grat;
+					mes @n$;
+					mes "Parabéns "+strcharinfo(0)+", aqui está o seu prêmio!";
+					getitem 4365,1;
+					announce "Incrível!" +(Sex?"O Jogador":"A Jogadora")+" "+strcharinfo(0)+" foi abençoado pela Deusa da sorte e recebeu a carta da Arquimaga Kathryne na Maquina de Troca! (1% de chance)",bc_all,0xFF0000,FW_BOLD; 
+					close;
+					}
+
+				if(rand(3) == 2){
+					emotion e_grat;
+					mes @n$;
+					mes "Parabéns "+strcharinfo(0)+", aqui está o seu prêmio!";
+					getitem 4403,1;
+					announce "Incrível," +(Sex?"O Jogador":"A Jogadora")+" "+strcharinfo(0)+" foi abençoado pela Deusa da sorte e recebeu a carta do Kiel-D-01 na Maquina de Troca! (1% de chance)",bc_all,0xFF0000,FW_BOLD; 
+					close;
+					}
+
+
+				if(rand(3) == 3){
+					emotion e_grat;
+					mes @n$;
+					mes "Parabéns "+strcharinfo(0)+", aqui está o seu prêmio!";
+					getitem 4399,1;
+					announce "Incrível," +(Sex?"O Jogador":"A Jogadora")+" "+strcharinfo(0)+" foi abençoado pela Deusa da sorte e recebeu a carta da Memória de Thanatos na Maquina de Troca! (1% de chance)",bc_all,0xFF0000,FW_BOLD; 
+					close;
+					}
+				}
+			}
 
 		case 2:
 			mes @n$;
@@ -1372,6 +1389,7 @@ info:
 	mes @n$;
 	mes "Com 5 pontos de troca você pode jogar na maquina, tendo chance de conseguir uma carta MVP das mais raras!";
 	mes "Claro que temos uma lista das cartas que você pode receber, com suas respectivas chances de vir.";
+	mes "Não esqueça que cobramos uma taxa de ^FF0000100KK^000000 em zenys para jogar!";
 	next;
 	mes @n$;
 	mes "Resumindo: Pegamos 5 cartas MVP ruins, reciclamos elas e trocamos por 1 boa!";
