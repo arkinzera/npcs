@@ -1,0 +1,1363 @@
+//=============================================
+//== Script ~ Troca de cartas MVP      ========
+//== Versão: ==================================
+//== 1.0
+//== Autor: ===================================
+//== 		Ark1n
+//=============================================
+prontera,150,150,3  script  Maquina de Trocas  563,{
+//=======================================================
+// Configurações do NPC 
+set #pontoscarta,0;
+set @n$,"[^0000FF Maquina de Trocas ^000000]";
+// ======================================================
+
+
+mes @n$;
+mes "Seja "+(sex?"bem-vindo":"bem-vinda")+" "+strcharinfo(0)+", o que gostaria de fazer hoje ?";
+next;
+menu "Cartas por Pontos de Troca!",cartaponto,"Usar meus pontos!",usarpontos,"Mais informações!",info;
+
+// Inicio da troca
+cartaponto:
+	mes @n$;
+	mes "Tudo bem "+strcharinfo(0)+", vou te mostrar a lista de cartas MVP que aceitamos.";
+	mes "Escolha uma das cartas do menu:";
+	menu "Carta Abelha Rainha",c1,"Carta Algoz Eremes",c2,"Carta Atiradora de Elite Cecil",c3,"Carta Atroce",c4,"Carta Bafomé",c5,"Carta Belzebu",c6,"Carta Caveleiro da Tempestade",c28,"Carta Dama de Branco",c7,"Carta Detardeurus",c8,"Proxima Página",prox;
+
+prox:
+	menu "Carta Doppelganger",c9,"Carta Dracula",c10,"Carta Drake",c11,"Carta Eddga",c12,"Carta Espadachim Egnigem [Chefe]",c13,"Carta Faraó",c14,"Carta Flor do Luar",c15,"Carta Freeoni",c27"Carta Hatii",c16,"Proxima pagina",prox2;
+
+prox2:
+	menu "Carta Ktullanux",c17,"Carta Lady Tanee",c18,"Carta Osiris",c19,"Carta Orc Heroi",c20,"Carta RSX-0806",c21,"Carta Samurai Encarnado",c29,"Carta Senhor Das Trevas",c30,"Carta Senhor dos Mortos",c22,"Carta Senhor dos Orcs",c23,"Carta Serpente Suprema",c24,"Carta Sumo Sacerdotisa Margaretha",c25,"Carta Vesper",c26;
+
+c1:
+	next;
+	mes @n$;
+	mes"Você deseja trocar a carta da ^0000FFAbelha Rainha^000000 por 1 ponto de troca?";
+	switch(select("Sim, Quero trocar!":"Não, "+(sex?"obrigado":"obrigada")+"." )) {
+			case 1:
+				next;
+				mes @n$;
+				mes "Deixe-me verificar se você possui a carta.";
+				if (countitem(4132)<1){
+					next;
+					mes @n$;
+					mes "Parece que você não tem essa carta!";
+					mes "Volte quando estiver com a carta.";
+					close;
+				} else {
+					next;
+					mes @n$;
+					mes "Insira a carta na maquina para retirar seus pontos!";
+					next;
+					mes "Beep... Beep... Beep...";
+					next;
+					emotion e_thx;
+					mes @n$;
+					mes "Prontinho! Aqui está seu ponto.";
+					delitem 4132,1;
+					set #pontoscarta,#pontoscarta+1;
+					mes "Volte sempre que quiser!";
+					close;
+				}
+				
+			case 2:
+				next;
+				mes @n$;
+				mes "Muito bem, volte quando precisar!";
+				close;
+				
+		}
+
+c2:
+	next;
+	mes @n$;
+	mes"Você deseja trocar a carta do ^0000FFAlgoz Eremes^000000 por 1 ponto de troca?";
+	switch(select("Sim, Quero trocar!":"Não, "+(sex?"obrigado":"obrigada")+"." )) {
+			case 1:
+				next;
+				mes @n$;
+				mes "Deixe-me verificar se você possui a carta.";
+				if (countitem(4359)<1){
+					next;
+					mes @n$;
+					mes "Parece que você não tem essa carta!";
+					mes "Volte quando estiver com a carta.";
+					close;
+				} else {
+					next;
+					mes @n$;
+					mes "Insira a carta na maquina para retirar seus pontos!";
+					next;
+					mes "Beep... Beep... Beep...";
+					next;
+					emotion e_thx;
+					mes @n$;
+					mes "Prontinho! Aqui está seu ponto.";
+					delitem 4359,1;
+					set #pontoscarta,#pontoscarta+1;
+					mes "Volte sempre que quiser!";
+					close;
+				}
+				
+			case 2:
+				next;
+				mes @n$;
+				mes "Muito bem, volte quando precisar!";
+				close;
+				
+		}
+
+c3:
+	next;
+	mes @n$;
+	mes"Você deseja trocar a carta da ^0000FFAtiradora de Elite Cecil^000000 por 1 ponto de troca?";
+	switch(select("Sim, Quero trocar!":"Não, "+(sex?"obrigado":"obrigada")+"." )) {
+			case 1:
+				next;
+				mes @n$;
+				mes "Deixe-me verificar se você possui a carta.";
+				if (countitem(4367)<1){
+					next;
+					mes @n$;
+					mes "Parece que você não tem essa carta!";
+					mes "Volte quando estiver com a carta.";
+					close;
+				} else {
+					next;
+					mes @n$;
+					mes "Insira a carta na maquina para retirar seus pontos!";
+					next;
+					mes "Beep... Beep... Beep...";
+					next;
+					emotion e_thx;
+					mes @n$;
+					mes "Prontinho! Aqui está seu ponto.";
+					delitem 4367,1;
+					set #pontoscarta,#pontoscarta+1;
+					mes "Volte sempre que quiser!";
+					close;
+				}
+				
+			case 2:
+				next;
+				mes @n$;
+				mes "Muito bem, volte quando precisar!";
+				close;
+				
+		}		
+		
+c4:
+	next;
+	mes @n$;
+	mes"Você deseja trocar a carta do ^0000FFAtroce^000000 por 1 ponto de troca?";
+	switch(select("Sim, Quero trocar!":"Não, "+(sex?"obrigado":"obrigada")+"." )) {
+			case 1:
+				next;
+				mes @n$;
+				mes "Deixe-me verificar se você possui a carta.";
+				if (countitem(4425)<1){
+					next;
+					mes @n$;
+					mes "Parece que você não tem essa carta!";
+					mes "Volte quando estiver com a carta.";
+					close;
+				} else {
+					next;
+					mes @n$;
+					mes "Insira a carta na maquina para retirar seus pontos!";
+					next;
+					mes "Beep... Beep... Beep...";
+					next;
+					emotion e_thx;
+					mes @n$;
+					mes "Prontinho! Aqui está seu ponto.";
+					delitem 4425,1;
+					set #pontoscarta,#pontoscarta+1;
+					mes "Volte sempre que quiser!";
+					close;
+				}
+				
+			case 2:
+				next;
+				mes @n$;
+				mes "Muito bem, volte quando precisar!";
+				close;
+				
+		}
+
+c5:
+	next;
+	mes @n$;
+	mes"Você deseja trocar a carta do ^0000FFBafomé^000000 por 1 ponto de troca?";
+	switch(select("Sim, Quero trocar!":"Não, "+(sex?"obrigado":"obrigada")+"." )) {
+			case 1:
+				next;
+				mes @n$;
+				mes "Deixe-me verificar se você possui a carta.";
+				if (countitem(4147)<1){
+					next;
+					mes @n$;
+					mes "Parece que você não tem essa carta!";
+					mes "Volte quando estiver com a carta.";
+					close;
+				} else {
+					next;
+					mes @n$;
+					mes "Insira a carta na maquina para retirar seus pontos!";
+					next;
+					mes "Beep... Beep... Beep...";
+					next;
+					emotion e_thx;
+					mes @n$;
+					mes "Prontinho! Aqui está seu ponto.";
+					delitem 4147,1;
+					set #pontoscarta,#pontoscarta+1;
+					mes "Volte sempre que quiser!";
+					close;
+				}
+				
+			case 2:
+				next;
+				mes @n$;
+				mes "Muito bem, volte quando precisar!";
+				close;
+				
+		}
+
+c6:
+	next;
+	mes @n$;
+	mes"Você deseja trocar a carta do ^0000FFBelzebu^000000 por 1 ponto de troca?";
+	switch(select("Sim, Quero trocar!":"Não, "+(sex?"obrigado":"obrigada")+"." )) {
+			case 1:
+				next;
+				mes @n$;
+				mes "Deixe-me verificar se você possui a carta.";
+				if (countitem(4145)<1){
+					next;
+					mes @n$;
+					mes "Parece que você não tem essa carta!";
+					mes "Volte quando estiver com a carta.";
+					close;
+				} else {
+					next;
+					mes @n$;
+					mes "Insira a carta na maquina para retirar seus pontos!";
+					next;
+					mes "Beep... Beep... Beep...";
+					next;
+					emotion e_thx;
+					mes @n$;
+					mes "Prontinho! Aqui está seu ponto.";
+					delitem 4145,1;
+					set #pontoscarta,#pontoscarta+1;
+					mes "Volte sempre que quiser!";
+					close;
+				}
+				
+			case 2:
+				next;
+				mes @n$;
+				mes "Muito bem, volte quando precisar!";
+				close;
+				
+		}		
+
+c7:
+	next;
+	mes @n$;
+	mes"Você deseja trocar a carta da ^0000FFDama de Branco^000000 por 1 ponto de troca?";
+	switch(select("Sim, Quero trocar!":"Não, "+(sex?"obrigado":"obrigada")+"." )) {
+			case 1:
+				next;
+				mes @n$;
+				mes "Deixe-me verificar se você possui a carta.";
+				if (countitem(4372)<1){
+					next;
+					mes @n$;
+					mes "Parece que você não tem essa carta!";
+					mes "Volte quando estiver com a carta.";
+					close;
+				} else {
+					next;
+					mes @n$;
+					mes "Insira a carta na maquina para retirar seus pontos!";
+					next;
+					mes "Beep... Beep... Beep...";
+					next;
+					emotion e_thx;
+					mes @n$;
+					mes "Prontinho! Aqui está seu ponto.";
+					delitem 4372,1;
+					set #pontoscarta,#pontoscarta+1;
+					mes "Volte sempre que quiser!";
+					close;
+				}
+				
+			case 2:
+				next;
+				mes @n$;
+				mes "Muito bem, volte quando precisar!";
+				close;
+				
+		}		
+
+c8:
+	next;
+	mes @n$;
+	mes"Você deseja trocar a carta do ^0000FFDetardeurus^000000 por 1 ponto de troca?";
+	switch(select("Sim, Quero trocar!":"Não, "+(sex?"obrigado":"obrigada")+"." )) {
+			case 1:
+				next;
+				mes @n$;
+				mes "Deixe-me verificar se você possui a carta.";
+				if (countitem(4386)<1){
+					next;
+					mes @n$;
+					mes "Parece que você não tem essa carta!";
+					mes "Volte quando estiver com a carta.";
+					close;
+				} else {
+					next;
+					mes @n$;
+					mes "Insira a carta na maquina para retirar seus pontos!";
+					next;
+					mes "Beep... Beep... Beep...";
+					next;
+					emotion e_thx;
+					mes @n$;
+					mes "Prontinho! Aqui está seu ponto.";
+					delitem 4386,1;
+					set #pontoscarta,#pontoscarta+1;
+					mes "Volte sempre que quiser!";
+					close;
+				}
+				
+			case 2:
+				next;
+				mes @n$;
+				mes "Muito bem, volte quando precisar!";
+				close;
+				
+		}		
+		
+c9:
+	next;
+	mes @n$;
+	mes"Você deseja trocar a carta do ^0000FFDoppelganger^000000 por 1 ponto de troca?";
+	switch(select("Sim, Quero trocar!":"Não, "+(sex?"obrigado":"obrigada")+"." )) {
+			case 1:
+				next;
+				mes @n$;
+				mes "Deixe-me verificar se você possui a carta.";
+				if (countitem(4142)<1){
+					next;
+					mes @n$;
+					mes "Parece que você não tem essa carta!";
+					mes "Volte quando estiver com a carta.";
+					close;
+				} else {
+					next;
+					mes @n$;
+					mes "Insira a carta na maquina para retirar seus pontos!";
+					next;
+					mes "Beep... Beep... Beep...";
+					next;
+					emotion e_thx;
+					mes @n$;
+					mes "Prontinho! Aqui está seu ponto.";
+					delitem 4142,1;
+					set #pontoscarta,#pontoscarta+1;
+					mes "Volte sempre que quiser!";
+					close;
+				}
+				
+			case 2:
+				next;
+				mes @n$;
+				mes "Muito bem, volte quando precisar!";
+				close;
+				
+		}		
+
+c10:
+	next;
+	mes @n$;
+	mes"Você deseja trocar a carta da ^0000FFDracula^000000 por 1 ponto de troca?";
+	switch(select("Sim, Quero trocar!":"Não, "+(sex?"obrigado":"obrigada")+"." )) {
+			case 1:
+				next;
+				mes @n$;
+				mes "Deixe-me verificar se você possui a carta.";
+				if (countitem(4134)<1){
+					next;
+					mes @n$;
+					mes "Parece que você não tem essa carta!";
+					mes "Volte quando estiver com a carta.";
+					close;
+				} else {
+					next;
+					mes @n$;
+					mes "Insira a carta na maquina para retirar seus pontos!";
+					next;
+					mes "Beep... Beep... Beep...";
+					next;
+					emotion e_thx;
+					mes @n$;
+					mes "Prontinho! Aqui está seu ponto.";
+					delitem 4134,1;
+					set #pontoscarta,#pontoscarta+1;
+					mes "Volte sempre que quiser!";
+					close;
+				}
+				
+			case 2:
+				next;
+				mes @n$;
+				mes "Muito bem, volte quando precisar!";
+				close;
+				
+		}		
+
+c11:
+	next;
+	mes @n$;
+	mes"Você deseja trocar a carta da ^0000Drake^000000 por 1 ponto de troca?";
+	switch(select("Sim, Quero trocar!":"Não, "+(sex?"obrigado":"obrigada")+"." )) {
+			case 1:
+				next;
+				mes @n$;
+				mes "Deixe-me verificar se você possui a carta.";
+				if (countitem(4137)<1){
+					next;
+					mes @n$;
+					mes "Parece que você não tem essa carta!";
+					mes "Volte quando estiver com a carta.";
+					close;
+				} else {
+					next;
+					mes @n$;
+					mes "Insira a carta na maquina para retirar seus pontos!";
+					next;
+					mes "Beep... Beep... Beep...";
+					next;
+					emotion e_thx;
+					mes @n$;
+					mes "Prontinho! Aqui está seu ponto.";
+					delitem 4137,1;
+					set #pontoscarta,#pontoscarta+1;
+					mes "Volte sempre que quiser!";
+					close;
+				}
+				
+			case 2:
+				next;
+				mes @n$;
+				mes "Muito bem, volte quando precisar!";
+				close;
+				
+		}		
+
+c12:
+	next;
+	mes @n$;
+	mes"Você deseja trocar a carta do ^0000FFEddga^000000 por 1 ponto de troca?";
+	switch(select("Sim, Quero trocar!":"Não, "+(sex?"obrigado":"obrigada")+"." )) {
+			case 1:
+				next;
+				mes @n$;
+				mes "Deixe-me verificar se você possui a carta.";
+				if (countitem(4123)<1){
+					next;
+					mes @n$;
+					mes "Parece que você não tem essa carta!";
+					mes "Volte quando estiver com a carta.";
+					close;
+				} else {
+					next;
+					mes @n$;
+					mes "Insira a carta na maquina para retirar seus pontos!";
+					next;
+					mes "Beep... Beep... Beep...";
+					next;
+					emotion e_thx;
+					mes @n$;
+					mes "Prontinho! Aqui está seu ponto.";
+					delitem 4123,1;
+					set #pontoscarta,#pontoscarta+1;
+					mes "Volte sempre que quiser!";
+					close;
+				}
+				
+			case 2:
+				next;
+				mes @n$;
+				mes "Muito bem, volte quando precisar!";
+				close;
+				
+		}		
+
+c13:
+	next;
+	mes @n$;
+	mes"Você deseja trocar a carta da ^0000FFEspadachim Egnigem Cenia [Chefe]^000000 por 1 ponto de troca?";
+	switch(select("Sim, Quero trocar!":"Não, "+(sex?"obrigado":"obrigada")+"." )) {
+			case 1:
+				next;
+				mes @n$;
+				mes "Deixe-me verificar se você possui a carta.";
+				if (countitem(4352)<1){
+					next;
+					mes @n$;
+					mes "Parece que você não tem essa carta!";
+					mes "Volte quando estiver com a carta.";
+					close;
+				} else {
+					next;
+					mes @n$;
+					mes "Insira a carta na maquina para retirar seus pontos!";
+					next;
+					mes "Beep... Beep... Beep...";
+					next;
+					emotion e_thx;
+					mes @n$;
+					mes "Prontinho! Aqui está seu ponto.";
+					delitem 4352,1;
+					set #pontoscarta,#pontoscarta+1;
+					mes "Volte sempre que quiser!";
+					close;
+				}
+				
+			case 2:
+				next;
+				mes @n$;
+				mes "Muito bem, volte quando precisar!";
+				close;
+				
+		}		
+
+c14:
+	next;
+	mes @n$;
+	mes"Você deseja trocar a carta do ^0000FFFaraó^000000 por 1 ponto de troca?";
+	switch(select("Sim, Quero trocar!":"Não, "+(sex?"obrigado":"obrigada")+"." )) {
+			case 1:
+				next;
+				mes @n$;
+				mes "Deixe-me verificar se você possui a carta.";
+				if (countitem(4148)<1){
+					next;
+					mes @n$;
+					mes "Parece que você não tem essa carta!";
+					mes "Volte quando estiver com a carta.";
+					close;
+				} else {
+					next;
+					mes @n$;
+					mes "Insira a carta na maquina para retirar seus pontos!";
+					next;
+					mes "Beep... Beep... Beep...";
+					next;
+					emotion e_thx;
+					mes @n$;
+					mes "Prontinho! Aqui está seu ponto.";
+					delitem 4148,1;
+					set #pontoscarta,#pontoscarta+1;
+					mes "Volte sempre que quiser!";
+					close;
+				}
+				
+			case 2:
+				next;
+				mes @n$;
+				mes "Muito bem, volte quando precisar!";
+				close;
+				
+		}		
+
+c15:
+	next;
+	mes @n$;
+	mes"Você deseja trocar a carta da ^0000FFFlor do Luar^000000 por 1 ponto de troca?";
+	switch(select("Sim, Quero trocar!":"Não, "+(sex?"obrigado":"obrigada")+"." )) {
+			case 1:
+				next;
+				mes @n$;
+				mes "Deixe-me verificar se você possui a carta.";
+				if (countitem(4131)<1){
+					next;
+					mes @n$;
+					mes "Parece que você não tem essa carta!";
+					mes "Volte quando estiver com a carta.";
+					close;
+				} else {
+					next;
+					mes @n$;
+					mes "Insira a carta na maquina para retirar seus pontos!";
+					next;
+					mes "Beep... Beep... Beep...";
+					next;
+					emotion e_thx;
+					mes @n$;
+					mes "Prontinho! Aqui está seu ponto.";
+					delitem 4131,1;
+					set #pontoscarta,#pontoscarta+1;
+					mes "Volte sempre que quiser!";
+					close;
+				}
+				
+			case 2:
+				next;
+				mes @n$;
+				mes "Muito bem, volte quando precisar!";
+				close;
+				
+		}		
+
+c16:
+	next;
+	mes @n$;
+	mes"Você deseja trocar a carta do ^0000FFHatii^000000 por 1 ponto de troca?";
+	switch(select("Sim, Quero trocar!":"Não, "+(sex?"obrigado":"obrigada")+"." )) {
+			case 1:
+				next;
+				mes @n$;
+				mes "Deixe-me verificar se você possui a carta.";
+				if (countitem(4324)<1){
+					next;
+					mes @n$;
+					mes "Parece que você não tem essa carta!";
+					mes "Volte quando estiver com a carta.";
+					close;
+				} else {
+					next;
+					mes @n$;
+					mes "Insira a carta na maquina para retirar seus pontos!";
+					next;
+					mes "Beep... Beep... Beep...";
+					next;
+					emotion e_thx;
+					mes @n$;
+					mes "Prontinho! Aqui está seu ponto.";
+					delitem 4324,1;
+					set #pontoscarta,#pontoscarta+1;
+					mes "Volte sempre que quiser!";
+					close;
+				}
+				
+			case 2:
+				next;
+				mes @n$;
+				mes "Muito bem, volte quando precisar!";
+				close;
+				
+		}		
+
+c17:
+	next;
+	mes @n$;
+	mes"Você deseja trocar a carta do ^0000FFKtullanux^000000 por 1 ponto de troca?";
+	switch(select("Sim, Quero trocar!":"Não, "+(sex?"obrigado":"obrigada")+"." )) {
+			case 1:
+				next;
+				mes @n$;
+				mes "Deixe-me verificar se você possui a carta.";
+				if (countitem(4419)<1){
+					next;
+					mes @n$;
+					mes "Parece que você não tem essa carta!";
+					mes "Volte quando estiver com a carta.";
+					close;
+				} else {
+					next;
+					mes @n$;
+					mes "Insira a carta na maquina para retirar seus pontos!";
+					next;
+					mes "Beep... Beep... Beep...";
+					next;
+					emotion e_thx;
+					mes @n$;
+					mes "Prontinho! Aqui está seu ponto.";
+					delitem 4419,1;
+					set #pontoscarta,#pontoscarta+1;
+					mes "Volte sempre que quiser!";
+					close;
+				}
+				
+			case 2:
+				next;
+				mes @n$;
+				mes "Muito bem, volte quando precisar!";
+				close;
+				
+		}		
+
+c18:
+	next;
+	mes @n$;
+	mes"Você deseja trocar a carta da ^0000FFLady Tanee^000000 por 1 ponto de troca?";
+	switch(select("Sim, Quero trocar!":"Não, "+(sex?"obrigado":"obrigada")+"." )) {
+			case 1:
+				next;
+				mes @n$;
+				mes "Deixe-me verificar se você possui a carta.";
+				if (countitem(4376)<1){
+					next;
+					mes @n$;
+					mes "Parece que você não tem essa carta!";
+					mes "Volte quando estiver com a carta.";
+					close;
+				} else {
+					next;
+					mes @n$;
+					mes "Insira a carta na maquina para retirar seus pontos!";
+					next;
+					mes "Beep... Beep... Beep...";
+					next;
+					emotion e_thx;
+					mes @n$;
+					mes "Prontinho! Aqui está seu ponto.";
+					delitem 4376,1;
+					set #pontoscarta,#pontoscarta+1;
+					mes "Volte sempre que quiser!";
+					close;
+				}
+				
+			case 2:
+				next;
+				mes @n$;
+				mes "Muito bem, volte quando precisar!";
+				close;
+				
+		}
+		
+c19:
+	next;
+	mes @n$;
+	mes"Você deseja trocar a carta do ^0000FFOsiris^000000 por 1 ponto de troca?";
+	switch(select("Sim, Quero trocar!":"Não, "+(sex?"obrigado":"obrigada")+"." )) {
+			case 1:
+				next;
+				mes @n$;
+				mes "Deixe-me verificar se você possui a carta.";
+				if (countitem(4144)<1){
+					next;
+					mes @n$;
+					mes "Parece que você não tem essa carta!";
+					mes "Volte quando estiver com a carta.";
+					close;
+				} else {
+					next;
+					mes @n$;
+					mes "Insira a carta na maquina para retirar seus pontos!";
+					next;
+					mes "Beep... Beep... Beep...";
+					next;
+					emotion e_thx;
+					mes @n$;
+					mes "Prontinho! Aqui está seu ponto.";
+					delitem 4144,1;
+					set #pontoscarta,#pontoscarta+1;
+					mes "Volte sempre que quiser!";
+					close;
+				}
+				
+			case 2:
+				next;
+				mes @n$;
+				mes "Muito bem, volte quando precisar!";
+				close;
+				
+		}		
+
+c20:
+	next;
+	mes @n$;
+	mes"Você deseja trocar a carta do ^0000FFOrc Heroi^000000 por 1 ponto de troca?";
+	switch(select("Sim, Quero trocar!":"Não, "+(sex?"obrigado":"obrigada")+"." )) {
+			case 1:
+				next;
+				mes @n$;
+				mes "Deixe-me verificar se você possui a carta.";
+				if (countitem(4143)<1){
+					next;
+					mes @n$;
+					mes "Parece que você não tem essa carta!";
+					mes "Volte quando estiver com a carta.";
+					close;
+				} else {
+					next;
+					mes @n$;
+					mes "Insira a carta na maquina para retirar seus pontos!";
+					next;
+					mes "Beep... Beep... Beep...";
+					next;
+					emotion e_thx;
+					mes @n$;
+					mes "Prontinho! Aqui está seu ponto.";
+					delitem 4143,1;
+					set #pontoscarta,#pontoscarta+1;
+					mes "Volte sempre que quiser!";
+					close;
+				}
+				
+			case 2:
+				next;
+				mes @n$;
+				mes "Muito bem, volte quando precisar!";
+				close;
+				
+		}		
+
+c21:
+	next;
+	mes @n$;
+	mes"Você deseja trocar a carta do ^0000FFRSX-0806^000000 por 1 ponto de troca?";
+	switch(select("Sim, Quero trocar!":"Não, "+(sex?"obrigado":"obrigada")+"." )) {
+			case 1:
+				next;
+				mes @n$;
+				mes "Deixe-me verificar se você possui a carta.";
+				if (countitem(4342)<1){
+					next;
+					mes @n$;
+					mes "Parece que você não tem essa carta!";
+					mes "Volte quando estiver com a carta.";
+					close;
+				} else {
+					next;
+					mes @n$;
+					mes "Insira a carta na maquina para retirar seus pontos!";
+					next;
+					mes "Beep... Beep... Beep...";
+					next;
+					emotion e_thx;
+					mes @n$;
+					mes "Prontinho! Aqui está seu ponto.";
+					delitem 4342,1;
+					set #pontoscarta,#pontoscarta+1;
+					mes "Volte sempre que quiser!";
+					close;
+				}
+				
+			case 2:
+				next;
+				mes @n$;
+				mes "Muito bem, volte quando precisar!";
+				close;
+				
+		}		
+		
+c22:
+	next;
+	mes @n$;
+	mes"Você deseja trocar a carta do ^0000FFSenhor dos Mortos^000000 por 1 ponto de troca?";
+	switch(select("Sim, Quero trocar!":"Não, "+(sex?"obrigado":"obrigada")+"." )) {
+			case 1:
+				next;
+				mes @n$;
+				mes "Deixe-me verificar se você possui a carta.";
+				if (countitem(4276)<1){
+					next;
+					mes @n$;
+					mes "Parece que você não tem essa carta!";
+					mes "Volte quando estiver com a carta.";
+					close;
+				} else {
+					next;
+					mes @n$;
+					mes "Insira a carta na maquina para retirar seus pontos!";
+					next;
+					mes "Beep... Beep... Beep...";
+					next;
+					emotion e_thx;
+					mes @n$;
+					mes "Prontinho! Aqui está seu ponto.";
+					delitem 4276,1;
+					set #pontoscarta,#pontoscarta+1;
+					mes "Volte sempre que quiser!";
+					close;
+				}
+				
+			case 2:
+				next;
+				mes @n$;
+				mes "Muito bem, volte quando precisar!";
+				close;
+				
+		}		
+		
+c23:
+	next;
+	mes @n$;
+	mes"Você deseja trocar a carta do ^0000FFSenhor dos Orcs^000000 por 1 ponto de troca?";
+	switch(select("Sim, Quero trocar!":"Não, "+(sex?"obrigado":"obrigada")+"." )) {
+			case 1:
+				next;
+				mes @n$;
+				mes "Deixe-me verificar se você possui a carta.";
+				if (countitem(4135)<1){
+					next;
+					mes @n$;
+					mes "Parece que você não tem essa carta!";
+					mes "Volte quando estiver com a carta.";
+					close;
+				} else {
+					next;
+					mes @n$;
+					mes "Insira a carta na maquina para retirar seus pontos!";
+					next;
+					mes "Beep... Beep... Beep...";
+					next;
+					emotion e_thx;
+					mes @n$;
+					mes "Prontinho! Aqui está seu ponto.";
+					delitem 4135,1;
+					set #pontoscarta,#pontoscarta+1;
+					mes "Volte sempre que quiser!";
+					close;
+				}
+				
+			case 2:
+				next;
+				mes @n$;
+				mes "Muito bem, volte quando precisar!";
+				close;
+				
+		}		
+		
+c24:
+	next;
+	mes @n$;
+	mes"Você deseja trocar a carta da ^0000FFSerpente Suprema^000000 por 1 ponto de troca?";
+	switch(select("Sim, Quero trocar!":"Não, "+(sex?"obrigado":"obrigada")+"." )) {
+			case 1:
+				next;
+				mes @n$;
+				mes "Deixe-me verificar se você possui a carta.";
+				if (countitem(4330)<1){
+					next;
+					mes @n$;
+					mes "Parece que você não tem essa carta!";
+					mes "Volte quando estiver com a carta.";
+					close;
+				} else {
+					next;
+					mes @n$;
+					mes "Insira a carta na maquina para retirar seus pontos!";
+					next;
+					mes "Beep... Beep... Beep...";
+					next;
+					emotion e_thx;
+					mes @n$;
+					mes "Prontinho! Aqui está seu ponto.";
+					delitem 4330,1;
+					set #pontoscarta,#pontoscarta+1;
+					mes "Volte sempre que quiser!";
+					close;
+				}
+				
+			case 2:
+				next;
+				mes @n$;
+				mes "Muito bem, volte quando precisar!";
+				close;
+				
+		}	
+		
+c25:
+	next;
+	mes @n$;
+	mes"Você deseja trocar a carta da ^0000FFSumo Sacerdotisa Margaretha^000000 por 1 ponto de troca?";
+	switch(select("Sim, Quero trocar!":"Não, "+(sex?"obrigado":"obrigada")+"." )) {
+			case 1:
+				next;
+				mes @n$;
+				mes "Deixe-me verificar se você possui a carta.";
+				if (countitem(4363)<1){
+					next;
+					mes @n$;
+					mes "Parece que você não tem essa carta!";
+					mes "Volte quando estiver com a carta.";
+					close;
+				} else {
+					next;
+					mes @n$;
+					mes "Insira a carta na maquina para retirar seus pontos!";
+					next;
+					mes "Beep... Beep... Beep...";
+					next;
+					emotion e_thx;
+					mes @n$;
+					mes "Prontinho! Aqui está seu ponto.";
+					delitem 4363,1;
+					set #pontoscarta,#pontoscarta+1;
+					mes "Volte sempre que quiser!";
+					close;
+				}
+				
+			case 2:
+				next;
+				mes @n$;
+				mes "Muito bem, volte quando precisar!";
+				close;
+				
+		}		
+		
+c26:
+	next;
+	mes @n$;
+	mes"Você deseja trocar a carta do ^0000FFVesper^000000 por 1 ponto de troca?";
+	switch(select("Sim, Quero trocar!":"Não, "+(sex?"obrigado":"obrigada")+"." )) {
+			case 1:
+				next;
+				mes @n$;
+				mes "Deixe-me verificar se você possui a carta.";
+				if (countitem(4374)<1){
+					next;
+					mes @n$;
+					mes "Parece que você não tem essa carta!";
+					mes "Volte quando estiver com a carta.";
+					close;
+				} else {
+					next;
+					mes @n$;
+					mes "Insira a carta na maquina para retirar seus pontos!";
+					next;
+					mes "Beep... Beep... Beep...";
+					next;
+					emotion e_thx;
+					mes @n$;
+					mes "Prontinho! Aqui está seu ponto.";
+					delitem 4374,1;
+					set #pontoscarta,#pontoscarta+1;
+					mes "Volte sempre que quiser!";
+					close;
+				}
+				
+			case 2:
+				next;
+				mes @n$;
+				mes "Muito bem, volte quando precisar!";
+				close;
+				
+		}		
+		
+c27:
+	next;
+	mes @n$;
+	mes"Você deseja trocar a carta da ^0000FFFreeoni^000000 por 1 ponto de troca?";
+	switch(select("Sim, Quero trocar!":"Não, "+(sex?"obrigado":"obrigada")+"." )) {
+			case 1:
+				next;
+				mes @n$;
+				mes "Deixe-me verificar se você possui a carta.";
+				if (countitem(4121)<1){
+					next;
+					mes @n$;
+					mes "Parece que você não tem essa carta!";
+					mes "Volte quando estiver com a carta.";
+					close;
+				} else {
+					next;
+					mes @n$;
+					mes "Insira a carta na maquina para retirar seus pontos!";
+					next;
+					mes "Beep... Beep... Beep...";
+					next;
+					emotion e_thx;
+					mes @n$;
+					mes "Prontinho! Aqui está seu ponto.";
+					delitem 4121,1;
+					set #pontoscarta,#pontoscarta+1;
+					mes "Volte sempre que quiser!";
+					close;
+				}
+				
+			case 2:
+				next;
+				mes @n$;
+				mes "Muito bem, volte quando precisar!";
+				close;
+				
+		}		
+
+c28:
+	next;
+	mes @n$;
+	mes"Você deseja trocar a carta do ^0000FFCavaleiro da Tempestade^000000 por 1 ponto de troca?";
+	switch(select("Sim, Quero trocar!":"Não, "+(sex?"obrigado":"obrigada")+"." )) {
+			case 1:
+				next;
+				mes @n$;
+				mes "Deixe-me verificar se você possui a carta.";
+				if (countitem(4318)<1){
+					next;
+					mes @n$;
+					mes "Parece que você não tem essa carta!";
+					mes "Volte quando estiver com a carta.";
+					close;
+				} else {
+					next;
+					mes @n$;
+					mes "Insira a carta na maquina para retirar seus pontos!";
+					next;
+					mes "Beep... Beep... Beep...";
+					next;
+					emotion e_thx;
+					mes @n$;
+					mes "Prontinho! Aqui está seu ponto.";
+					delitem 4318,1;
+					set #pontoscarta,#pontoscarta+1;
+					mes "Volte sempre que quiser!";
+					close;
+				}
+				
+			case 2:
+				next;
+				mes @n$;
+				mes "Muito bem, volte quando precisar!";
+				close;
+				
+		}		
+		
+c29:
+	next;
+	mes @n$;
+	mes"Você deseja trocar a carta do ^0000FFSamurai Encarnado^000000 por 1 ponto de troca?";
+	switch(select("Sim, Quero trocar!":"Não, "+(sex?"obrigado":"obrigada")+"." )) {
+			case 1:
+				next;
+				mes @n$;
+				mes "Deixe-me verificar se você possui a carta.";
+				if (countitem(4263)<1){
+					next;
+					mes @n$;
+					mes "Parece que você não tem essa carta!";
+					mes "Volte quando estiver com a carta.";
+					close;
+				} else {
+					next;
+					mes @n$;
+					mes "Insira a carta na maquina para retirar seus pontos!";
+					next;
+					mes "Beep... Beep... Beep...";
+					next;
+					emotion e_thx;
+					mes @n$;
+					mes "Prontinho! Aqui está seu ponto.";
+					delitem 4263,1;
+					set #pontoscarta,#pontoscarta+1;
+					mes "Volte sempre que quiser!";
+					close;
+				}
+				
+			case 2:
+				next;
+				mes @n$;
+				mes "Muito bem, volte quando precisar!";
+				close;
+				
+		}		
+		
+c30:
+	next;
+	mes @n$;
+	mes"Você deseja trocar a carta do ^0000FFSenhor das Trevas^000000 por 1 ponto de troca?";
+	switch(select("Sim, Quero trocar!":"Não, "+(sex?"obrigado":"obrigada")+"." )) {
+			case 1:
+				next;
+				mes @n$;
+				mes "Deixe-me verificar se você possui a carta.";
+				if (countitem(4168)<1){
+					next;
+					mes @n$;
+					mes "Parece que você não tem essa carta!";
+					mes "Volte quando estiver com a carta.";
+					close;
+				} else {
+					next;
+					mes @n$;
+					mes "Insira a carta na maquina para retirar seus pontos!";
+					next;
+					mes "Beep... Beep... Beep...";
+					next;
+					emotion e_thx;
+					mes @n$;
+					mes "Prontinho! Aqui está seu ponto.";
+					delitem 4168,1;
+					set #pontoscarta,#pontoscarta+1;
+					mes "Volte sempre que quiser!";
+					close;
+				}
+				
+			case 2:
+				next;
+				mes @n$;
+				mes "Muito bem, volte quando precisar!";
+				close;
+				
+		}		
+
+
+// Fim da Troca
+
+
+// Inicio do uso de pontos
+usarpontos:
+	mes @n$;
+	mes "Ótimo "+strcharinfo(0)+", as cartas que você pode receber na roleta, com suas respectivas chances, são:";
+	next;
+	mes "Carta Amon Ra e Carta Maya - 20%", "Carta Tao Gunka e Carta General Tartaruga - 12%", "Carta Bispo Decadente, Carta Ifrit, Carta Mestre-Ferreiro Howard  - 8%";
+	mes "Carta Arquimaga Kathryne, Carta Besouro Ladrão Dourado, Carta Kiel-D-01, Carta Lord Seyren, Carta Memória de Thanatos, Carta Valquiria Randgris - 2%", ;
+	next;
+	mes @n$;
+	mes "Você gostaria de jogar na roleta ?";
+	next;
+	switch(select("Vou jogar agora!":"Pensando bem, vou deixar pra depois.")) {
+		case 1:
+		mes @n$;
+		mes "Espero que você tenha muita sorte e receba a carta que deseja "+strchainfo(0)+"!";
+		next;
+		mes "Beep... Beep... Beep...";
+		next;
+		
+				if(rand (100) < 41) goto premio1;
+				if(rand (100) >= 41 || < 65) goto premio2;
+				if(rand (100) >= 65 || < 89) goto premio3;	
+				if(rand (100) >= 89 || <= 100) goto premio4;
+
+		
+			premio1:
+				if(rand (2) == 1){
+					emotion e_grat;
+					mes @n$;
+					mes "Parabéns "+strcharinfo(0)+", aqui está o seu prêmio!";
+					getitem 4236,1;
+					announce +(sex?"O Jogador":"A Jogadora")+ +strchainfo(0)+ " recebeu a carta do Amon Ra na Maquina de Troca! (20% de chance)",bc_all,0x00FF00; 		
+					close;
+					} else {
+						emotion e_grat;
+						mes @n$;
+						mes "Parabéns "+strcharinfo(0)+", aqui está o seu prêmio!";
+						announce +(sex?"O Jogador":"A Jogadora")+ +strchainfo(0)+ " recebeu a carta da Maya na Maquina de Troca! (20% de chance)",bc_all,0x00FF00; 		
+						getitem 4146,1;
+						close;
+					}
+					
+			premio2:
+				if(rand (2) == 1){
+					emotion e_grat;
+					mes @n$;
+					mes "Parabéns "+strcharinfo(0)+", aqui está o seu prêmio!";
+					getitem 4302,1;
+					announce +(sex?"O Jogador":"A Jogadora")+ +strchainfo(0)+ " recebeu a carta do Tao Gunka na Maquina de Troca! (12% de chance)",bc_all,0xFFFF00; 
+					close;
+
+					} else {
+						emotion e_grat;
+						mes @n$;
+						mes "Parabéns "+strcharinfo(0)+", aqui está o seu prêmio!";
+						announce +(sex?"O Jogador":"A Jogadora")+ +strchainfo(0)+ " recebeu a carta do General Tartaruga na Maquina de Troca! (12% de chance)",bc_all,0xFFFF00; 
+						getitem 4305,1;
+						close;
+					}
+					
+			premio3:
+				if(rand (3) == 1){
+					emotion e_grat;
+					mes @n$;
+					mes "Parabéns "+strcharinfo(0)+", aqui está o seu prêmio!";
+					getitem 4441,1;
+					announce "Uau, "+(sex?"O Jogador":"A Jogadora")+ +strchainfo(0)+ " recebeu a carta do Bispo Decadente na Maquina de Troca! (8% de chance)",bc_all,0x0000FF; 
+					close;
+
+					} else { if(rand (3) == 2){
+						emotion e_grat;
+						mes @n$;
+						mes "Parabéns "+strcharinfo(0)+", aqui está o seu prêmio!";
+						announce "Uau, "+(sex?"O Jogador":"A Jogadora")+ +strchainfo(0)+ " recebeu a carta do Ifrit na Maquina de Troca! (8% de chance)",bc_all,0x0000FF; 
+						getitem 4430,1;
+						close;
+					} else {
+							emotion e_grat;
+							mes @n$;
+							mes "Parabéns "+strcharinfo(0)+", aqui está o seu prêmio!";
+							announce "Uau, "+(sex?"O Jogador":"A Jogadora")+ +strchainfo(0)+ " recebeu a carta do Mestre-Ferreiro Howard na Maquina de Troca! (8% de chance)",bc_all,0x0000FF; 
+							getitem 4361,1;
+							close;
+						}
+					}
+			
+			premio4:
+				if(rand(6) == 1){
+					emotion e_grat;
+					mes @n$;
+					mes "Parabéns "+strcharinfo(0)+", aqui está o seu prêmio!";
+					getitem 4365,1;
+					announce "Uau, "+(sex?"O Jogador":"A Jogadora")+ +strchainfo(0)+ " teve muita sorte e recebeu a carta da Arquimaga Kathryne na Maquina de Troca! (2% de chance)",bc_all,0xFF0000,fw_bold; 
+					close;
+					}
+				if(rand(6) == 2){
+					emotion e_grat;
+					mes @n$;
+					mes "Parabéns "+strcharinfo(0)+", aqui está o seu prêmio!";
+					getitem 4128,1;
+					announce "Uau, "+(sex?"O Jogador":"A Jogadora")+ +strchainfo(0)+ " teve muita sorte e recebeu a carta do Besouro-Ladrão Dourado na Maquina de Troca! (2% de chance)",bc_all,0xFF0000,fw_bold; 
+					close;
+					}
+				if(rand(6) == 3){
+					emotion e_grat;
+					mes @n$;
+					mes "Parabéns "+strcharinfo(0)+", aqui está o seu prêmio!";
+					getitem 4403,1;
+					announce "Uau, "+(sex?"O Jogador":"A Jogadora")+ +strchainfo(0)+ " teve muita sorte e recebeu a carta do Kiel-D-01 na Maquina de Troca! (2% de chance)",bc_all,0xFF0000,fw_bold; 
+					close;
+					}
+				if(rand(6) == 4){
+					emotion e_grat;
+					mes @n$;
+					mes "Parabéns "+strcharinfo(0)+", aqui está o seu prêmio!";
+					getitem 4357,1;
+					announce "Uau, "+(sex?"O Jogador":"A Jogadora")+ +strchainfo(0)+ " teve muita sorte e recebeu a carta do Lord Seyren na Maquina de Troca! (2% de chance)",bc_all,0xFF0000,fw_bold; 
+					close;
+					}
+				if(rand(6) == 5){
+					emotion e_grat;
+					mes @n$;
+					mes "Parabéns "+strcharinfo(0)+", aqui está o seu prêmio!";
+					getitem 4399,1;
+					announce "Uau, "+(sex?"O Jogador":"A Jogadora")+ +strchainfo(0)+ " teve muita sorte e recebeu a carta da Memória de Thanatos na Maquina de Troca! (2% de chance)",bc_all,0xFF0000,fw_bold; 
+					close;
+					}
+				if(rand(6) == 6){
+					emotion e_grat;
+					mes @n$;
+					mes "Parabéns "+strcharinfo(0)+", aqui está o seu prêmio!";
+					getitem 4407,1;
+					announce "Uau, "+(sex?"O Jogador":"A Jogadora")+ +strchainfo(0)+ " teve muita sorte e recebeu a carta da Valquiria Randgris na Maquina de Troca! (2% de chance)",bc_all,0xFF0000,fw_bold; 
+					close;
+					}
+
+// Fim do uso de pontos					
+					
+// Informações do NPC					
+info:
+	mes @n$;
+	mes "Muito bem "+strcharinfo(0)+", vou te explicar como funciona a maquina de trocas.";
+	next;
+	mes @n$;
+	mes "Temos uma lista de cartas MVP que as pessoas não usam, que não são populares."
+	mes "Em troca dessas cartas nós te daremos 1 ponto de troca, que pode ser utilizado aqui mesmo!";
+	next;
+	mes @n$;
+	mes "Com 5 pontos de troca você pode jogar na maquina, tendo chance de conseguir uma carta MVP das mais raras!";
+	mes "Claro que temos uma lista das cartas que você pode receber, com suas respectivas chances de vir.";
+	next;
+	mes @n$;
+	mes "Resumindo: Pegamos 5 cartas MVP ruins, reciclamos elas e trocamos por 1 boa!";
+	close;
+	
+}	
