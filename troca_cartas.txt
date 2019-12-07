@@ -1,11 +1,69 @@
 //=============================================
 //== Script ~ Troca de cartas MVP      ========
 //== Versão: ==================================
-//== 1.0
+//== 1.0  - Npc Criado
+//== 1.1  - Alterado algumas % e custos
+//== 1.2  - Alterado para fins de semana
 //== Autor: ===================================
 //== 		Ark1n
 //=============================================
-prontera,150,150,3	script	Maquina de Trocas	563,{
+
+
+//                    NPC DE EVENTO
+//=======================================================
+-	script	Maquina_de_Trocas	FAKE_NPC	,{
+//=======================================================
+
+OnInit:
+		disablenpc("Maquina de Trocas#Main");
+		end;
+
+
+OnSat1200:
+		announce	"[Gerente de Trocas]: A Maquina de Trocas ficara disponível em 1 minuto!",bc_all,0xFF0000;
+		initnpctimer();
+		end;
+
+OnTimer60000:
+		enablenpc("Maquina de Trocas#Main");
+		announce "[Gerente de Trocas]: A Maquina de Trocas está disponível para uso até o fim do dia!",bc_all,0xFF0000;
+		stopnpctimer();
+		end;
+
+OnSat2359:
+		announce "[Gerente de Trocas]: A Maquina de Trocas irá fechar em 1 minuto!",bc_all,0xFF0000;
+		end;
+
+OnSun0000:
+		disablenpc("Maquina de Trocas#Main");
+		announce "[Gerente de Trocas]: Obrigado a todos que utilizaram a Maquina de Trocas hoje! Voltaremos a funcionar às 12:00 de Domingo.",bc_all,0xFF0000;
+		end;
+
+OnSun1159:
+		announce	"[Gerente de Trocas]: A Maquina de Trocas ficara disponível em 1 minuto!",bc_all,0xFF0000;
+		startnpctimer();
+		end;
+
+OnTimer120000:
+		enablenpc("Maquina de Trocas#Main");
+		announce "[Gerente de Trocas]: A Maquina de Trocas está disponível para uso até o fim do dia!",bc_all,0xFF0000;
+		stopnpctimer();
+		end;
+
+OnSun2359:
+		announce "[Gerente de Trocas]: A Maquina de Trocas irá fechar em 1 minuto!",bc_all,0xFF0000;
+		end;
+
+OnMon0000:
+		disablenpc("Maquina de Trocas#Main");
+		announce "[Gerente de Trocas]: Obrigado a todos que utilizaram a Maquina de Trocas hoje! Voltamos no próximo fim de semana!",bc_all,0xFF0000;
+		end;
+
+}
+
+//					NPC PRINCIPAL
+//=======================================================
+prontera,150,150,3	script	Maquina de Trocas#Main	563,{
 //=======================================================
 // Configurações do NPC 
 set @n$,"[^0000FF Maquina de Trocas ^000000]";
